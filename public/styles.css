@@ -1,0 +1,58 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat Variable', sans-serif;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #A0A0A0 #EEEEEE;
+}
+
+/* Chrome, Edge and Safari */
+*::-webkit-scrollbar {
+  width: 6px;
+  width: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  border-radius: 4px;
+  background-color: #EEEEEE;
+  border: 2px solid #FFFFFF;
+}
+
+*::-webkit-scrollbar-track:hover {
+  background-color: #EEEEEE;
+}
+
+*::-webkit-scrollbar-track:active {
+  background-color: #EEEEEE;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #A0A0A0;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #FF005C;
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background-color: #FF005C;
+}
+
+body {
+  /* background-color: var(--body); */
+  background-color: white;
+  max-width: 1800px;
+  margin: 0 auto;
+}
+
+/* ::selection {
+  background: none;
+} */
