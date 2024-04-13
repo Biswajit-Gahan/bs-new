@@ -56,6 +56,7 @@ export default function ClientEstimate() {
     }
 
     function getTotalPrice(price, approxWeight) {
+        console.log(price)
         return getExactValue(price * approxWeight, 2);
     }
 
@@ -68,24 +69,13 @@ export default function ClientEstimate() {
     }
 
     function handleRatePerKg(event) {
-        if(clientEstimateData.regex.ratePerKg.test(event.target.value)) {
-            dispatch({payload: {ratePerKg: parseFloat(event.target.value)}});
+        if(clientEstimateData.regex.isOnlyNumberAndPoint.test(event.target.value)) {
+            dispatch({payload: {ratePerKg: event.target.value}});
             return;
         }
 
         dispatch({payload: {ratePerKg: event.target.value.slice(0, event.target.value.length - 1)}});
     }
-
-    // console.clear()
-    // console.log(`
-    //     dimensionIndex: ${state.dimensionIndex},
-    //     thickness: ${state.thickness},
-    //     approxWeight: ${state.approxWeight},
-    //     gradeValue: ${state.gradeValue},
-    //     quantity: ${state.quantity},
-    //     totalPrice: ${state.totalPrice},
-    //     ratePerKg: ${state.ratePerKg}
-    // `)
 
     useEffect(() => {
         if(state.dimensionIndex && state.thickness) {
@@ -127,8 +117,6 @@ export default function ClientEstimate() {
 
     function handleRequestButton(event) {
         event.preventDefault();
-        console.clear();
-        console.log({...event.target});
 
         const [agentName, agentMobileNumber, preparedOnDate, validTillDate, clientName, clientCompanyName, clientGstin, clientMobileNumber, clientEmailId, clientAddress, gradeType, thickness, dimension, quantity, approxWeight, ratePerKg, totalPrice] = event.target;
 
@@ -306,13 +294,13 @@ export default function ClientEstimate() {
             <p className={styles.label}>Specify Grade Type</p>
             <div className={styles.select_container}>
                 <select id="gradeSelect" defaultValue="false" className={styles.grade_select}>
-                    <option value="false" disabled>Select grade type</option>
+                    <option value="false" disabled>Select Grade Type</option>
                     <option value="304">304</option>
                 </select>
             </div>
 
             {/* Select Thickness */}
-            <p className={styles.label}>Specify Thickness</p>
+            <p className={styles.label}>Specify Thickness (GAUGE)</p>
             <div className={styles.select_container}>
                 <ThicknessSelect dispatch={dispatch}/>
             </div>
@@ -334,7 +322,7 @@ export default function ClientEstimate() {
                    className={styles.input_field_design} value={state.approxWeight}/>
 
             {/* Rate per kg */}
-            <p className={styles.label}>Rate/KG</p>
+            <p className={styles.label}>Rate/KG (₹)</p>
             <input required type="text" id="ratePerKg" placeholder="Rate / kg" className={styles.input_field_design}
                    onInput={handleRatePerKg} value={state.ratePerKg}/>
 

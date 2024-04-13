@@ -9,9 +9,9 @@ export default function ThicknessSelect({dispatch}) {
     return (
         <>
             <select id="thicknessSelect" defaultValue="false" className={styles.thickness_select} onChange={handleThickness}>
-                <option value="false" disabled>Select thickness</option>
+                <option value="false" disabled>Select Thickness</option>
                 {
-                    clientEstimateData.thickness.map((item, index) => <option key={index} value={item}>{item} Gauge</option>)
+                    clientEstimateData.thickness.map((item, index) => <option key={index} value={item}>{item}</option>)
                 }
             </select>
         </>

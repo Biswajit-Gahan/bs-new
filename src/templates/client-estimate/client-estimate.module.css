@@ -1,5 +1,5 @@
 .main {
-    background-color: #f7f7f7;
+    background-color: #202020;
 }
 
 .form {
@@ -15,7 +15,7 @@
     width: 100%;
     font-size: 12px;
     font-weight: 700;
-    color: #646464;
+    color: #d1d1d1;
 }
 
 .request_button {
@@ -49,10 +49,10 @@
     border-radius: 5px;
     padding: 0 15px;
     font-size: 12px;
-    box-shadow: 0 5px 10px -3px rgba(0, 0, 0, 0.1);
     font-weight: 500;
     color: #585858;
-    background-color: #fff;
+    box-shadow: 0 5px 10px -3px rgba(0, 0, 0, 0.52);
+    background-color: #f4f4f4;
 }
 
 .text_field_area_design {
@@ -63,7 +63,8 @@
     padding: 15px;
     font-size: 12px;
     resize: none;
-    box-shadow: 0 5px 10px -3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 10px -3px rgba(0, 0, 0, 0.52);
+    background-color: #f4f4f4;
     font-weight: 500;
     color: #585858;
 }
@@ -72,11 +73,11 @@
 
 
 .select_container {
-    background-color: #fff;
     padding: 0 15px;
     width: 100%;
     border-radius: 5px;
-    box-shadow: 0 5px 10px -3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 10px -3px rgba(0, 0, 0, 0.52);
+    background-color: #f4f4f4;
 }
 
 .grade_select {
@@ -87,9 +88,9 @@
     border-radius: 5px;
     font-size: 12px;
     font-family: inherit;
-    background-color: #fff;
     font-weight: 500;
     color: #585858;
+    background-color: #f4f4f4;
 }
 
 /* caution */

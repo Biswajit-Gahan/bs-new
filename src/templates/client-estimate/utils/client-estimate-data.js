@@ -45,14 +45,14 @@ const clientEstimateData = {
 
     regex: {
         quantity : /^[1-9][0-9]{0,5}$/,
-        ratePerKg: /^[1-9][0-9]*(\.[0-9]{1,2})?$/,
+        ratePerKg: /^[0-9]+(\.[0-9]{1,2})?$/,
         name: /^[a-zA-z]{3}[ a-zA-Z]{1,22}$/,
         companyName: /^[a-zA-z]{3}[ .a-zA-Z0-9]{1,47}$/,
         gstNumber: /^[a-zA-z0-9]{15}$/,
         mobileNumber: /^[6-9][0-9]{9}$/,
         address: /^[\w\s-,.@]*$/,
         email: /^[\w\s\-,.]*@[\w\s\-,]+(\.[a-zA-z]+)(\.[a-zA-z]+)?$/,
-
+        isOnlyNumberAndPoint: /[0-9.]/g,
     },
 
     token: "DXRF7T8YUIPOKI98765FC86T9708UPO7TYGT",
