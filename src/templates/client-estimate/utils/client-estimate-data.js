@@ -60,8 +60,8 @@ const clientEstimateData = {
     messages: {
         success: {
             formRequest: `
-                Your form has been submitted successfully. 
-                We'll get back to you soon. 
+                Your quotation has been generated successfully, 
+                and sent it to your email id. 
                 Thanks for showing interest.
             `
         },
