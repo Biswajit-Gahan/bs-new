@@ -11,7 +11,7 @@ const clientEstimateData = {
         <Fragment><DimensionSelectInnerText sup={3} sub={4} /></Fragment>,
         <Fragment>1</Fragment>,
         <Fragment>1 <DimensionSelectInnerText sup={1} sub={4} /></Fragment>,
-        <>1 <DimensionSelectInnerText sup={1} sub={2} /></>,
+        <Fragment>1 <DimensionSelectInnerText sup={1} sub={2} /></Fragment>,
         <Fragment>2</Fragment>,
         <Fragment>2 <DimensionSelectInnerText sup={1} sub={2} /></Fragment>,
         <Fragment>3</Fragment>,
@@ -50,8 +50,8 @@ const clientEstimateData = {
         companyName: /^[a-zA-z]{3}[ .a-zA-Z0-9]{1,47}$/,
         gstNumber: /^[a-zA-z0-9]{15}$/,
         mobileNumber: /^[6-9][0-9]{9}$/,
-        address: /^[\w\s-,.@]*$/,
-        email: /^[\w\s\-,.]*@[\w\s\-,]+(\.[a-zA-z]+)(\.[a-zA-z]+)?$/,
+        address: /^[\w\s-,.@]{3,}$/,
+        email: /^[\w\s\-,.]*@[\w\s\-,]{3,}(\.[a-zA-z]{2,})(\.[a-zA-z]{2,})?$/,
         isOnlyNumberAndPoint: /[0-9.]/g,
     },
 
@@ -142,6 +142,15 @@ const clientEstimateData = {
             totalPrice: `
                 Total price field should not be empty.
                 Please enter rates per kg in numeric value to generate the total price value.
+            `,
+
+            estimatesLength: `
+                Sorry! You can't add more than 20 estimates.
+                Please delete to add another.
+            `,
+
+            emptyRequest: `
+                Please add at-least one estimate to request the quotation.
             `,
         }
     }

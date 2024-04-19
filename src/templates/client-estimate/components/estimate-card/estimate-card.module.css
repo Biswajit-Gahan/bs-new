@@ -1,0 +1,47 @@
+.estimateCardContainer {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    background-color: #181818;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.contentContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contentText {
+    font-size: 13px;
+    font-weight: 700;
+    color: #B7B7B7;
+}
+
+.deleteButton {
+    width: fit-content;
+    padding: 10px 20px;
+    background-color: #B80058;
+    border: none;
+    color: #B7B7B7;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 3px;
+}
+
+.numberContainer {
+    position: relative;
+}
+
+.numberText {
+    font-size: 70px;
+    font-weight: 800;
+    color: rgba(183, 183, 183, 0.04);
+    position: absolute;
+    right: 0;
+    top: 0;
+}

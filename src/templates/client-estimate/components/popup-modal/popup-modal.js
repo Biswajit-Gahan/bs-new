@@ -1,17 +1,22 @@
 import styles from "./popup-modal.module.css";
 import successImage from "../../../../assets/images/success.png";
 import errorImage from "../../../../assets/images/error.png";
-import {useSearchParams} from "react-router-dom";
+import {useNavigate, useSearchParams} from "react-router-dom";
 
 export default function PopupModal({data: {flag, message}, setShowPopup}) {
     const [searchParams, setSearchParams] = useSearchParams();
+    const navigate = useNavigate();
+
     function handleOkButton() {
         setShowPopup(() => ({flag: false, data: {flag: false, message: ""}}));
-        const name = searchParams.get("name");
-        const mobile = searchParams.get("mobile");
-        const token = searchParams.get("token");
-        const success = "true";
-        setSearchParams({name, mobile, token, success});
+        if(flag) {
+            // const name = searchParams.get("name");
+            // const mobile = searchParams.get("mobile");
+            // const token = searchParams.get("token");
+            // const success = "true";
+            // setSearchParams({name, mobile, token, success});
+            navigate("/client-estimate?success=true")
+        }
     }
     return <section className={styles.popupContainer}>
         <div className={styles.popupWrapper}>
