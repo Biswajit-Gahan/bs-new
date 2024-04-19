@@ -10,12 +10,12 @@ export default function PopupModal({data: {flag, message}, setShowPopup}) {
     function handleOkButton() {
         setShowPopup(() => ({flag: false, data: {flag: false, message: ""}}));
         if(flag) {
-            // const name = searchParams.get("name");
-            // const mobile = searchParams.get("mobile");
-            // const token = searchParams.get("token");
-            // const success = "true";
-            // setSearchParams({name, mobile, token, success});
-            navigate("/client-estimate?success=true")
+            const name = searchParams.get("name");
+            const mobile = searchParams.get("mobile");
+            const token = searchParams.get("token");
+            const success = "true";
+            setSearchParams({name, mobile, token, success});
+            navigate(0);
         }
     }
     return <section className={styles.popupContainer}>
