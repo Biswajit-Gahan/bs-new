@@ -1,0 +1,73 @@
+.mainContainer {
+    width: 100%;
+    overflow: hidden;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 25px 100px;
+    gap: 20px;
+}
+
+.wrapper {
+    overflow-x: scroll;
+    scrollbar-width: none;
+    width: 100%;
+}
+
+.heading {
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.table {
+    border-collapse: collapse;
+    width: 100%;
+    text-wrap: nowrap;
+    font-size: 12px;
+}
+
+.table td, .table th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+.back_button {
+    position: fixed;
+    bottom: 20px;
+    left: 5%;
+    /*transform: translateX(-50%);*/
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    color: #fff;
+    background-color: #B80058;
+    border: none;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.download_button {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 50px;
+    border-radius: 50px;
+    color: #fff;
+    background-color: #B80058;
+    border: none;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.editIcon {
+    width: 25px;
+}

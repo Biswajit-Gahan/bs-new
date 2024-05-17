@@ -1,4 +1,4 @@
-import React, { lazy, Suspense} from "react";
+import React, {lazy, Suspense} from "react";
 import Navbar from "../components/navbar/Navbar";
 // import Home from "../templates/home/Home";
 import Footer from "../components/footer/Footer";
@@ -9,6 +9,7 @@ import "../app/app.styles.css";
 import LoadingScreen from "../components/loading.screen/LoadingScreen";
 import TopNavigator from "../components/top.navigator/TopNavigator";
 import ClientEstimate from "../templates/client-estimate/client-estimate";
+import ReactPdfView from "../templates/react-pdf-view";
 // import ContactUs from "../templates/contact.us/ContactUs";
 // import EndUses from "../templates/end.uses/EndUses";
 // import Quality from "../templates/quality/Quality";
@@ -23,28 +24,30 @@ const News = lazy(() => (import("../templates/news/News")));
 
 const App = () => {
     const location = useLocation();
-    const createElementPath = location.pathname === "/client-estimate";
+    const clientEstimatePath = location.pathname === "/client-estimate";
 
-  return (
-    <>
-      <TopNavigator />
-        {!createElementPath && <Navbar />}
-      <Routes>
-        <Route path="/">
-          <Route index element={<Suspense fallback={<LoadingScreen />}>< Home /></Suspense>} />
-          <Route path="products/:productType" element={<Suspense fallback={<LoadingScreen />}><Product /></Suspense>} />
-          <Route path="about-us" element={<Suspense fallback={<LoadingScreen />}><AboutUs /></Suspense>} />
-          <Route path="contact-us" element={<Suspense fallback={<LoadingScreen />}><ContactUs /></Suspense>} />
-          <Route path="end-uses" element={<Suspense fallback={<LoadingScreen />}><EndUses /></Suspense>} />
-          <Route path="quality" element={<Suspense fallback={<LoadingScreen />}><Quality /></Suspense>} />
-          <Route path="news" element={<Suspense fallback={<LoadingScreen />}><News /></Suspense>} />
-            <Route path="*" element={<Suspense fallback={<LoadingScreen />}>< Home /></Suspense>} />
-            <Route path="/client-estimate" element={<ClientEstimate />}/>
-        </Route>
-      </Routes>
-        {!createElementPath && <Footer />}
-    </>
-  );
+    return (
+        <>
+            <TopNavigator/>
+            {!clientEstimatePath && <Navbar/>}
+            <Routes>
+                <Route path="/">
+                    <Route index element={<Suspense fallback={<LoadingScreen/>}>< Home/></Suspense>}/>
+                    <Route path="products/:productType"
+                           element={<Suspense fallback={<LoadingScreen/>}><Product/></Suspense>}/>
+                    <Route path="about-us" element={<Suspense fallback={<LoadingScreen/>}><AboutUs/></Suspense>}/>
+                    <Route path="contact-us" element={<Suspense fallback={<LoadingScreen/>}><ContactUs/></Suspense>}/>
+                    <Route path="end-uses" element={<Suspense fallback={<LoadingScreen/>}><EndUses/></Suspense>}/>
+                    <Route path="quality" element={<Suspense fallback={<LoadingScreen/>}><Quality/></Suspense>}/>
+                    <Route path="news" element={<Suspense fallback={<LoadingScreen/>}><News/></Suspense>}/>
+                    <Route path="*" element={<Suspense fallback={<LoadingScreen/>}>< Home/></Suspense>}/>
+                    <Route path="/client-estimate" element={<ClientEstimate/>}/>
+                    <Route path={"/react-pdf-view"} element={<ReactPdfView/>}/>
+                </Route>
+            </Routes>
+            {!clientEstimatePath && <Footer/>}
+        </>
+    );
 };
 
 export default App;

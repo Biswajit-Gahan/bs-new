@@ -5,7 +5,7 @@ import observer from "../../utils/observer";
 import localdb from "../../utils/localdb";
 import Testimonials from "../../components/testimonials/Testimonials";
 import QuotationTemplate from "../../components/quotation.template/quotation-template";
-// import MessageBox from "../../components/message.box/MessageBox";
+// import MessageBox from "../../template-components/message.box/MessageBox";
 
 const News = () => {
   const [showViewModal, setShowViewModal] = useState(() => false);

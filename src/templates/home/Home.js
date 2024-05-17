@@ -11,7 +11,7 @@ import Brochure from "../../components/brochure/Brochure";
 import AboutCompanyTag from "../../components/about.company.tag/AboutCompanyTag";
 import Testimonials from "../../components/testimonials/Testimonials";
 import NeedAssistance from "../../components/need.assistance/NeedAssistance";
-// import EventsSlider from "../../components/events.slider/EventsSlider";
+// import EventsSlider from "../../template-components/events.slider/EventsSlider";
 import MessageBox from "../../components/message.box/MessageBox";
 // import steelImage from "../../assets/images/steel-pipes.jpg";
 import { useNavigate } from "react-router-dom";
