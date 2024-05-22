@@ -48,7 +48,7 @@ export default function ShowEstimateScreen({state, dispatch}) {
         fileReader.readAsDataURL(file);
         fileReader.addEventListener("load", () => {
             const response = fileReader.result;
-            // console.log("FileReader Result: ", response)
+            console.log("FileReader Result: ", response)
             const link = document.createElement("a");
             link.href = `${response}`;
             link.download = `estimate-${Date.now()}.pdf`;
